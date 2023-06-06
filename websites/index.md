@@ -3,11 +3,13 @@
 ## 书籍
 [Good Reads](https://www.goodreads.com/)
 
-[豆瓣](https://book.douban.com/)
+[豆瓣](https://book.douban.com/)  
 
-[lib Gensis](https://libgen.is/)
-[Zlib](https://zlibrary-asia.se/)
-[Zlib专属链接]()
+[lib Gensis](https://libgen.is/) 
+
+[Zlib](https://zlibrary-asia.se/)  
+
+[Zlib专属链接](https://lib-hurkqiyciqybndjbrbeuxte4.booksc.eu/)
 
 ## 影音
 

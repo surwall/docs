@@ -1,12 +1,36 @@
 import { defineConfig } from 'vitepress'
-import {websites,math, code} from './sidebars'
+import { websites, math, code } from './sidebars'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: 'zh-CN',
   title: "Surwall's Blog",
   description: 'A VitePress Site',
+  lastUpdated: true,
+  /* markdown 配置 */
+  markdown: {
+    lineNumbers: true,
+  },
+  head: [
+    [
+      'link',
+      { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' },
+    ],
+  ],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    docFooter: { prev: '上一页', next: '下一页' },
+    returnToTopLabel: '回到顶部',
+    outline: {
+      label: '本页目录',
+    },
+    lastUpdatedText: '上次更新时间',
+    logo: '/logo.jpg',
+    editLink: {
+      text: '编辑此页面',
+      pattern: 'https://github.com/surwall/blog/edit/master/:path',
+    },
     nav: [
       // { text: 'Home', link: '/' },
       // { text: 'Examples', link: '/markdown-examples' },
@@ -19,7 +43,6 @@ export default defineConfig({
       '/code': code,
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/surwall'}
-  ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/surwall' }],
   },
 })
