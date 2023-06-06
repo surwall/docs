@@ -1,0 +1,14 @@
+.vitepress/cache
+.vitepress/dist
+node_modules
+.vscode
+!.vscode/settings.json
+*.log
+pnpm-lock.yaml
+docs/dev-dist/
+# OSX
+.DS_Store
+
+# node
+npm-debug.log
+yarn-error.log
