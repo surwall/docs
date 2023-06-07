@@ -37,3 +37,14 @@
   );
   --vp-home-hero-image-filter: blur(40px);
 }
+
+
+/* math jax */
+mjx-container {
+  display: inline-block;
+  margin: auto 2px -2px;
+}
+
+mjx-container > svg {
+  margin: auto;
+}
