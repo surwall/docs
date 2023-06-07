@@ -16,14 +16,14 @@ export default defineConfig({
     lineNumbers: true,
     config: (md) => {
       md.use(mathjax3)
-    }
+    },
   },
   vue: {
     template: {
       compilerOptions: {
-        isCustomElement: (tag) => customElements.includes(tag)
-      }
-    }
+        isCustomElement: (tag) => customElements.includes(tag),
+      },
+    },
   },
   head: [
     [
@@ -35,9 +35,18 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     docFooter: { prev: '上一页', next: '下一页' },
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'Z1XLFKCKDN',
+        apiKey: '4af158a7baf52e79afea28560a0f8252',
+        indexName: 'xuchaoyin',
+      },
+    },
     returnToTopLabel: '回到顶部',
     outline: {
       label: '本页目录',
+      level: 'deep',
     },
     lastUpdatedText: '上次更新时间',
     logo: '/logo.jpg',
