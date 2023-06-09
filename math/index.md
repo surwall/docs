@@ -32,7 +32,9 @@ we define a full revolution in 360 degress.
 
 we say a angle $\theta$ is 1 radian. it means the length of arc that subtends the angle is exactly $1\times radius$
 
-When we measure an angle in radians, we are essentially measuring the ratio between the length of a circular arc and the radius of the circle it lies on. So a full revolution means the circumference of a circle. The angle in terms of radians is 
+When we measure an angle in radians, we are essentially measuring the ratio between the length of a circular arc and the radius of the circle it lies on. So a full revolution means the circumference of a circle. 
+
+Because we know the $c = 2\pi{r}$. The angle in terms of radians is 
 $$
 \frac{2\cdot\pi\cdot{r}}{r} = 2\cdot\pi
 $$
@@ -43,6 +45,14 @@ The relation between degress and radians is
 $$
 360\degree = 2\pi \text{rad}
 $$
+
+
+
+s indicates sector, r indicates radius, $\theta$ is just the angle in radians.
+$$
+\theta = \frac{s}{r}
+$$
+
 
 
 
