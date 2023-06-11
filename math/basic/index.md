@@ -228,3 +228,11 @@ sin~(-x) = -sin(x)\\
 cos~(-x) = cos(x)\\
 $$
 
+
+$$
+\sin(\theta+\phi) = \sin\theta\cos\phi + \cos\theta\sin\phi \\
+\cos(\theta+\phi) = \cos\theta\cos\phi - \sin\theta\sin\phi \\
+
+sin~2\theta~=~2sin\theta~\cos\theta\\
+cos~2\theta~=cos^2\theta~-~\sin^2\theta\\
+$$
