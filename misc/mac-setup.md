@@ -12,28 +12,32 @@
 
 ## 软件列表
 
-| 用途        | 安装                                              | 额外操作              |
-| ----------- | ------------------------------------------------- | --------------------- |
-| 截图        | `brew install --cask snipaste`                    |                       |
-| 卸载软件    | `brew install --cask appcleaner`                  |                       |
-| 看图        | `brew install --cask xnviewmp`                    |                       |
-| 输入法      | `brew install --cask baiduinput`                  |                       |
-| 视频播放器  | `brew install --cask vlc`                         | [ vlc ](#vlc)         |
-| PDF编辑阅读 | 百度网盘 PDF EXPERT                               |                       |
-| 邮件管理    | `brew install --cask readdle-spark` / [APP STORE] |                       |
-| NTFS读取    | `brew install --cask mounty`                      |                       |
-| 远程桌面    | `brew insta ll --cask microsoft-remote-desktop`   |                       |
-| 词典        | `brew install --cask eudic`                       | [欧陆词典](#欧陆词典) |
-| BT下载      | `brew install --cask c0re100-qbittorrent`         |                       |
-| 游览器      | `brew install --cask google-chrome `              |                       |
-| 浏览器      | `brew install --cask firefox-esr`                 |                       |
-| 文件清理    | 百度网盘 cleanMyMac                               |                       |
-| 下载管理    | neat downloadManager                              |                       |
-| 视频剪辑    | [APP STORE] 剪映                                  |                       |
-| 百度网盘    | [APP STORE]百度网盘                               |                       |
-| 通讯聊天    | [APP STORE]微信                                   |                       |
-| todo        | [APP STORE]滴答清单                               |                       |
-| 终端        | `brew install --cask iterm2`                      | [Iterm2](#Iterm2)     |
+| 用途          | 安装                                              | 额外操作              |
+| ------------- | ------------------------------------------------- | --------------------- |
+| 截图          | `brew install --cask snipaste`                    |                       |
+| 卸载软件      | `brew install --cask appcleaner`                  |                       |
+| 看图          | `brew install --cask xnviewmp`                    |                       |
+| 输入法        | `brew install --cask baiduinput`                  |                       |
+| 视频播放器    | `brew install --cask vlc`                         | [ vlc ](#vlc)         |
+| PDF编辑阅读   | 百度网盘 PDF EXPERT                               |                       |
+| 邮件管理      | `brew install --cask readdle-spark` / [APP STORE] |                       |
+| NTFS读取      | `brew install --cask mounty`                      |                       |
+| 远程桌面      | `brew insta ll --cask microsoft-remote-desktop`   |                       |
+| 词典          | `brew install --cask eudic`                       | [欧陆词典](#欧陆词典) |
+| BT下载        | `brew install --cask c0re100-qbittorrent`         |                       |
+| 游览器        | `brew install --cask google-chrome `              |                       |
+| 浏览器        | `brew install --cask firefox-esr`                 |                       |
+| 文件清理      | 百度网盘 cleanMyMac                               |                       |
+| 下载管理      | neat downloadManager                              |                       |
+| 视频剪辑      | [APP STORE] 剪映                                  |                       |
+| 百度网盘      | [APP STORE]百度网盘                               |                       |
+| 通讯聊天      | [APP STORE]微信                                   |                       |
+| todo          | [APP STORE]滴答清单                               |                       |
+| 终端          | `brew install --cask iterm2`                      | [Iterm2](#Iterm2)     |
+| 设置urlscheme | `brew install --cask swiftdefaultappsprefpane`    | 比如 vlc://           |
+|               |                                                   |                       |
+|               |                                                   |                       |
+|               |                                                   |                       |
 
 
 
