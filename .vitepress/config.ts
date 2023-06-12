@@ -52,7 +52,7 @@ export default defineConfig({
     logo: '/logo.jpg',
     editLink: {
       text: '编辑此页面',
-      pattern: 'https://github.com/surwall/blog/edit/master/:path',
+      pattern: 'https://github.com/surwall/docs/edit/master/:path',
     },
     nav: [
       // { text: 'Home', link: '/' },

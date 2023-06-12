@@ -1,6 +1,7 @@
 .vitepress/cache
 .vitepress/dist
 node_modules
+yarn.lock
 .vscode
 !.vscode/settings.json
 *.log
