@@ -25,23 +25,14 @@ RUN echo "deb http://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib 
 
 
 
+## check docker
 
+1. `docker version`  verified cli can talk to engine
+2. `docker info` most config values of engine
 
-
-
-• command: docker version
-
-​	• verified cli can talk to engine
-
-• command: docker info
-
-​	• most config values of engine
-
-• docker command line structure
-
-​	• old (still works): docker <command> (options)
-
-​	• new: docker <command> <sub-command> (options)
+3. command line structure
+   1. old (still works): `docker <command>` (options)
+   2. new: docker `<command> <sub-command>` (options)
 
 
 
