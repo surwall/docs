@@ -53,6 +53,16 @@
 | 视频压缩       | `winget install HandBrake.HandBrake`                    |                      |
 | 安装为系统服务 | `winget install nssm.nssm`                              |                      |
 | 网盘管理工具   | `winget install Alist.Alist`                            |                      |
+| 友好 cat       | `winget install bat`                                    |                      |
+|                |                                                         |                      |
+|                |                                                         |                      |
+|                |                                                         |                      |
+|                |                                                         |                      |
+|                |                                                         |                      |
+|                |                                                         |                      |
+|                |                                                         |                      |
+|                |                                                         |                      |
+|                |                                                         |                      |
 |                |                                                         |                      |
 
 

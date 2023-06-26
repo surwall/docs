@@ -36,7 +36,7 @@
 | 终端          | `brew install --cask iterm2`                      | [Iterm2](#Iterm2)     |
 | 设置urlscheme | `brew install --cask swiftdefaultappsprefpane`    | 比如 vlc://           |
 | 分屏          | `brew install --cask rectangle`                   |                       |
-|               |                                                   |                       |
+| 友好cat       | `brew install bat`                                | 可高亮文本            |
 |               |                                                   |                       |
 
 
