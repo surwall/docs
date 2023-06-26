@@ -1,6 +1,6 @@
 # docker mastery
 
-## 镜像加速
+## mirror registry
 
 * [阿里云加速器(点击管理控制台 -> 登录账号(淘宝账号) -> 右侧镜像工具 -> 镜像加速器 -> 复制加速器地址)](https://www.aliyun.com/product/acr?source=5176.11533457&userCode=8lx5zmtu)
 * [网易云加速器](https://www.163yun.com/help/documents/56918246390157312) https://hub-mirror.c.163.com
@@ -155,7 +155,7 @@ docker container inspect --format '{{ .NetworkSettings.IPAddress }}' nginx
 
 
 
-### network management
+## network management
 
 ```bash
 # Show networks, have three network by default
@@ -184,7 +184,7 @@ the default network doesn't assign dns name to each container, but your newly cr
 
 
 
-#### DNS Round Robin Test
+### DNS Round Robin Test
 
 we can use assign multiple containers which lie in the same network a same alias, they can respond that dns name randomly.
 
