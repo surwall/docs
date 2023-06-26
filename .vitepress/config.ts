@@ -55,8 +55,16 @@ export default defineConfig({
       pattern: 'https://github.com/surwall/docs/edit/master/:path',
     },
     nav: [
-      // { text: 'Home', link: '/' },
-      // { text: 'Examples', link: '/markdown-examples' },
+      { text: 'code', link: '/code/' },
+      { text: 'math', link: '/math/' },
+      {
+        text: 'misc',
+        items: [
+          { text: 'mac setup', link: '/mac-setup.md' },
+          { text: 'windows setup', link: '/misc/win-setup.md' },
+          { text: 'mathjax', link: '/misc/mathjax.md' },
+        ],
+      },
     ],
 
     // 侧边栏匹配
