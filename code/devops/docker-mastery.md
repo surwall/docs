@@ -345,4 +345,41 @@ docker system df
 
 ## docker compose
 
-TODO
+what is docker compose?
+
+Docker compose can boost your productivity. For example, you wanna set up a service which requires php, mysql, redis and other stuffs to be installed. This can be tedious if we manually use the "docker run command". By using Docker Compose, we edit a file named "docker-compose.yml", store everything you would pass to a run command into this file.
+
+This is a brief of a compose file.
+
+```yaml
+services:
+  frontend:
+    image: nginx:alpine
+    ports:
+      - 8090:80
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+
+  backend:
+    image: demo-microservice
+    platform: wasi/wasm
+    build:
+      context: backend/
+    ports:
+      - 8080:8080
+    environment:
+      DATABASE_URL: mysql://root:whalehello@db:3306/mysql
+      RUST_BACKTRACE: full
+    restart: unless-stopped
+    runtime: io.containerd.wasmedge.v1
+
+  db:
+    image: mariadb:10.9
+    environment:
+      MYSQL_ROOT_PASSWORD: whalehello
+```
+
+Under services element, we have three service element. They are used as dns name in docker network. You don't need to specify a network, it will create a custom network for you unless you need additional configurations.
+
+The "build" element, is where your Dockerfile lives if you wanna build a custom image. Even you specify a image name, as long as you specify a build field, it means custom image.
+
