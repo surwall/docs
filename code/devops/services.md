@@ -2,8 +2,6 @@
 
 First, how services differ from normal applications, in short, services are special programs that run in the background, it often be referred to as "Daemon" in linux.
 
-There are three main things around services: service creation, service management, service removal.
-
 ## Service creation
 ### Windows
 on windows, due to the limitations of windows, we don't really have a good way to create it. There are two ways to create services.

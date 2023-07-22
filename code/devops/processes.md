@@ -4,7 +4,7 @@
 
 ### Windows
 
-A large amount of programs aren't command line programs. So sometimes we may start a GUI Apps, how do we let our terminal stop waiting the GUI closing. Type `typora.exe someParameter &`, the key is the ampersand, that indicates to run it in the background. Beware that this only works on latest PowerShell, I recommend you to use PowerShell7.
+A large amount of programs aren't console apps. So sometimes we may start a GUI Apps, how do we let our terminal stop waiting the GUI closing. Type `typora.exe someParameter &`, the key is the ampersand, that indicates to run it in the background. Beware that this only works on latest PowerShell, I recommend you to use PowerShell7.
 
 
 
