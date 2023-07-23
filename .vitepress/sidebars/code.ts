@@ -8,6 +8,7 @@ export const code: Sidebar = [
       { text: 'services', link: '/code/devops/services.md' },
       { text: 'processes', link: '/code/devops/processes.md' },
       { text: 'softwares', link: '/code/devops/softwares.md' },
+      { text: 'vim', link: '/code/devops/vim.md' },
     ],
   },
   {
