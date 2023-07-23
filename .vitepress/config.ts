@@ -34,7 +34,7 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    docFooter: { prev: '上一页', next: '下一页' },
+    // docFooter: { prev: '上一页', next: '下一页' },
     search: {
       provider: 'algolia',
       options: {
@@ -43,16 +43,16 @@ export default defineConfig({
         indexName: 'xuchaoyin',
       },
     },
-    returnToTopLabel: '回到顶部',
+    // returnToTopLabel: '回到顶部',
     outline: {
-      label: '本页目录',
+      // label: '本页目录',
       level: 'deep',
     },
-    lastUpdatedText: '上次更新时间',
+    // lastUpdatedText: '上次更新时间',
     logo: '/logo.jpg',
     editLink: {
-      text: '编辑此页面',
-      pattern: 'https://github.com/surwall/docs/edit/master/:path',
+      // text: '编辑此页面',
+      pattern: 'https://github.com/surwall/docs/edit/main/:path',
     },
     nav: [
       {text: 'economics', link: '/economics'},
