@@ -40,15 +40,22 @@ you may write multiple expressions in a single math block, use command `\`, you 
 
 ### other commands
 
-| display       | expression                      |                       |
-| ------------- | ------------------------------- | --------------------- |
-| $\frac{3}{5}$ | `$\frac{3}{5}$`                 |                       |
-| ${3}\neq{5}$  | `${3}\ne{5}$` or `${3}\neq{5}$` |                       |
-| $\pm{2}$      | `$\pm{2}$`                      | plus-minus symbol     |
-| $x~y$         | `$x~y$`                         | very little space     |
-| $x~~~y$       | `$x~~~y$`                       | manually change space |
-| $x\;y$        | `$x\;y$`                        | little space          |
-| $x \quad y$   | `$x\quady$`                     | space                 |
-| $x\qquad y$   | `$x\qquad y$`                   | more space            |
-|               |                                 |                       |
+| display                     | expression                      |                         |
+| --------------------------- | ------------------------------- | ----------------------- |
+| $\frac{3}{5}$               | `$\frac{3}{5}$`                 |                         |
+| ${3}\neq{5}$                | `${3}\ne{5}$` or `${3}\neq{5}$` |                         |
+| $\pm{2}$                    | `$\pm{2}$`                      | plus-minus symbol       |
+| $x~y$                       | `$x~y$`                         | very little space       |
+| $x~~~y$                     | `$x~~~y$`                       | manually change space   |
+| $x\;y$                      | `$x\;y$`                        | little space            |
+| $x \quad y$                 | `$x\quady$`                     | space                   |
+| $x\qquad y$                 | `$x\qquad y$`                   | more space              |
+| $\frac{du}{dt}$             | `$\frac{du}{dt}$`               | the derivative          |
+| $f'(x)$                     | `f'(x)`                         | the derivative          |
+| $f''(x)$                    | `f''(x)`                        | the second derivative   |
+| $\lim_{x \to +\infty} f(x)$ | `$\lim_{x \to +\infty} f(x)$`   | Limit at plus infinity  |
+| $\lim_{x \to -\infty} f(x)$ | `$\lim_{x \to -\infty} f(x)$`   | Limit at minus infinity |
+|                             |                                 |                         |
+
+
 
