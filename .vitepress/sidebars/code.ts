@@ -10,6 +10,8 @@ export const code: Sidebar = [
       { text: 'softwares', link: '/code/devops/softwares.md' },
       { text: 'vim', link: '/code/devops/vim.md' },
       { text: 'git', link: '/code/devops/git.md' },
+      { text: 'shell', link: '/code/devops/shell.md' },
+      { text: 'help system', link: '/code/devops/help-system.md' },
     ],
   },
   {
