@@ -24,7 +24,24 @@ Make sure you type `L` to load file in the buffer and then hit `Enter`.
 
 
 
-## Toggle Comment Multiple Lines[TODO]
+## Toggle Comment Multiple Lines
+
+TODO
 
 [Trick](https://www.maketecheasier.com/comment-multiple-lines-vim/#:~:text=Start%20by%20navigating%20to%20the,key%20to%20remove%20the%20comments.)
+
+
+
+## Normal Settings
+
+```bash
+:set laststatus=2 # This sets the status line to always be displayed with at least two lines of text.
+:syntax on # only enable in current buffer
+:syntax off
+:syntax # check current syntax setting
+syntax enable # enable syntax highlighting for all future sessions. add to ~/.vimrc or ~/.config/nvim/init.vim
+set number
+set wrap
+
+```
 

@@ -1,6 +1,5 @@
 # Shell
-
-
+We use shells to run scripts or commands that GUI environment isn't suitable. 
 
 ## Config
 
@@ -11,33 +10,23 @@ Every shell have its own config file.
 For PowerShell, it set a variable `$PROFILE` pointed to the profile path. You may need to create it first and then `notepad $PROFILE`. It also have global profile like `$PROFILE.AllUsersAllHosts`.
 
 ### Bash Config
+![bash config execution flow](./assets/bash config execution flow.svg)
 
-Before our discussion, we could divide them into three categories:
+The above picture shows the procedure of reading configurations. You can see it is divided into two categories: login shells and non-login shells.
 
-1. **Login Shell, Interactive:**
+When you login into the system or through SSH, Bash is started as a login shell. **Please note here, reading non-login configurations is not required by a login shell, nevertheless every distros source it inside `/etc/.profile`.** This goes to personal configurations as well. We source `~/.bashrc` inside `~/.bash_profile`. 
 
-When you login into the system or through SSH, Bash is started as a login shell, and it reads the following configuration( in this order):
+As for non-login shells, when we open a terminal app on our preferred desktop environment or execute a new shell inside a existing shell, that is a non-lgoin 
 
-* `/etc/profile` This file contains system-wide environment variables and settings for all users. It is read only once during the login process.
-* `/etc/bash.bashrc` or `/etc/bashrc`: On some systems, a global Bash configuration file is sourced after `/etc/profile`.
-* `~/.bash_profile`,`~/.bash_login`, `~/.profile`:  These files are alternative login scripts that are read if `~/.bash_profile` does not exist.
+There is a special file called `~/.bash_logout`, when you exit a login shell, it will execute this script.
 
-2. **Non-Login Shell, Interactive:**
+In certain cases, when Bash is used non-interactively (e.g., running scripts or commands), it reads the following file: `BASH_ENV`: If the `BASH_ENV` environment variable is set, Bash reads the file specified in `BASH_ENV` before executing any non-interactive shell.
 
-* `/etc/bash.bashrc` or `/etc/bashrc`: The global Bash configuration file is read for non-login interactive shells.
+> We can check `echo $0` to ensure it's a login shell if it has hyphen like `-bash`, if without hyphen, that's a non-login shell.
 
-* `~/.bashrc`: The user-specific configuration file that is sourced for interactive non-login shells. This file is read when you start a new terminal or open a new interactive shell within an existing session
-* `~/.bash_logout`: The user-specific configuration file that is sourced when a user logs out of the shell.
+Because of that login shells are only executed once during the login process, this is meant for heavy stuffs.  As for `rc ` file, they would run each time we start a new shell, we must set appearance and look every time. [link](https://unix.stackexchange.com/questions/324359/why-a-login-shell-over-a-non-login-shell/324391#324391)
 
-3. **Non-Login Shell, Non-Interactive:**
-
-* In certain cases, when Bash is used non-interactively (e.g., running scripts or commands), it reads the following file: `BASH_ENV`: If the `BASH_ENV` environment variable is set, Bash reads the file specified in `BASH_ENV` before executing any non-interactive shell.
-
-
-
-We can check `echo $0` to ensure it's a login shell if it has hyphen like `-bash`, if without hyphen, that's a non-login shell.
-
-If we login by SSH, we first check `/etc/profile`, then check `~/.bash_profile` or `~/.bash_login` or `~/.profile`. We won't actually read `.bashrc` unless we source it explicitly in the previous file. Because that config is meant for non-login interactive shells. And SSH sessions usually start a login shell by default. But after  you login by SSH, you type `bash` again, in that case, that's a non-login shell. That is same as we open a shell on desktop environment. If that is the case, we read from `~/.bashrc` only.
+Regardless of whether you start a child shell or a subshell, the prompt is not inherited from the parent shell. The prompt is a specific setting defined in the configuration file of each shell, and when a new shell is created, it uses its own configuration, including the prompt definition.
 
 
 
@@ -56,7 +45,7 @@ Run `regedit` and navigate to `HKEY_LOCAL_MACHINE\Software\Microsoft\Command Pro
 
 ### Zsh Config
 
-TODO
+![zsh config execution flow](./assets/zsh config execution flow.svg)
 
 
 
@@ -67,6 +56,9 @@ After we made some changes to our config file, we need immediately reflect it.
 1. PowerShell
 
 We use dot operator to reload profiles. `. $PROFILE` or `. $PROFILE.AllUsersCurrentHost`.
+
+- `.` (dot-sourcing) runs the script in the current scope, making all variables, functions, and aliases defined in the script available in the current session.
+- `&` (call operator) runs the script in its own scope, which means variables and functions defined in the script do not persist in the current session unless explicitly returned or stored in variables.
 
 
 
