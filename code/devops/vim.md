@@ -62,6 +62,15 @@ You may edit multiple files at the same time. One of the things I frequently do 
 
 You use `ctrl+w+[lrjk]` to move cursor to left, right, down, top window. Hit `ctrl+w+c` to close active window.
 
+## Tab Management
+To create a tab in Vim, use the following command:
+```bash
+:tabnew
+:tabnew /path/to/your_file
+[TODO]
+tab navigation
+```
+
 
 
 ## Plugin System And AutoStart
@@ -176,3 +185,10 @@ set ignorecase
 set smartcase
 ```
 
+## File Management
+Vim has a built-in file explorer called `netwr`. We can use that to delete and create directories and files.
+To creat a new directory, you type `d`, can type the name in the prompt.  
+To delete a file or directory, you move your cursor on your target, and hit `D`, press 'y' and enter.
+You may use visual mode to select multiple targets, then you press `a` to delete all files.
+Note, if a directory contains files in it, you can't delete it, but you can change default behavior from `rmdir` to `rm -rf`.
+You may wanna refresh your current list by using `ctrl+l`.  
