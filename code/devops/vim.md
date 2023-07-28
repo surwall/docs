@@ -192,3 +192,4 @@ To delete a file or directory, you move your cursor on your target, and hit `D`,
 You may use visual mode to select multiple targets, then you press `a` to delete all files.
 Note, if a directory contains files in it, you can't delete it, but you can change default behavior from `rmdir` to `rm -rf`.
 You may wanna refresh your current list by using `ctrl+l`.  
+You open the file in default application by using `x` on it.
