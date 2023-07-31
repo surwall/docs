@@ -25,8 +25,8 @@ features:
     # details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: macos配置
     link: /misc/mac-setup.md
-  - title: 数学
-    link: /math/index.md
+  - title: 小工具
+    link: /tools/index.md
 ---
 
 <style lang="css">

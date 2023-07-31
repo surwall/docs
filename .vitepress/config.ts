@@ -29,7 +29,16 @@ export default defineConfig({
     [
       'link',
       { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' },
+      //  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     ],
+    // [
+    //   'link',
+    //   {
+    //     href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css',
+    //     rel: 'stylesheet',
+    //     crossorigin: 'anonymous',
+    //   },
+    // ],
   ],
 
   themeConfig: {
@@ -55,7 +64,7 @@ export default defineConfig({
       pattern: 'https://github.com/surwall/docs/edit/main/:path',
     },
     nav: [
-      {text: 'economics', link: '/economics'},
+      { text: 'economics', link: '/economics' },
       { text: 'code', link: '/code/' },
       { text: 'math', link: '/math/' },
       {
@@ -77,4 +86,7 @@ export default defineConfig({
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/surwall' }],
   },
+
+  // no need for vite.config.ts
+  vite: {}
 })
