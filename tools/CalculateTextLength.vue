@@ -10,10 +10,15 @@
 
 <script lang="ts" setup>
 import InputBox from './InputBox.vue';
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 const content = ref('')
 const length = ref(0)
 const lang = ref('')
+
+
+onMounted(() => {
+    
+})
 
 
 function calculate() {

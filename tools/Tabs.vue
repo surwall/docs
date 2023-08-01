@@ -7,7 +7,7 @@
 
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import type { TabItem } from './ToolTab.vue'
 import ToolTab from './ToolTab.vue';
 
@@ -28,7 +28,31 @@ const tabComponents = [
     CalculateTextLength,
 ]
 
+onMounted(() => {
+    document.addEventListener('keydown', handleSwitchTabKey)
+})
+
+onUnmounted(() => {
+    document.removeEventListener('keydown', handleSwitchTabKey)
+})
+
+function handleSwitchTabKey(event: KeyboardEvent) {
+    console.log(event)
+    if (event.altKey) {
+        event.preventDefault()
+        console.log(event.key)
+        if (['1','2','3','4','5','6','7','8','9'].includes(event.key)) {
+            const targetIndex = Number(event.key)-1
+            if (targetIndex <= tabComponents.length - 1) {
+                handleChange(targetIndex)
+            }
+        }
+    }
+}
+
 const curTabIndex = ref(0)
+
+
 
 function handleChange(index: number) {
     tabList.value.forEach(item => item.active = false)

@@ -51,6 +51,14 @@ function handler(event: KeyboardEvent) {
         case 'ArrowRight':
             changeIndexDetail('right')
             break;
+        case 'Tab':
+            event.preventDefault()
+            if (event.shiftKey) {
+                changeIndexDetail('left')
+            } else {
+                changeIndexDetail('right')
+            }
+            break
         default:
             break;
     }

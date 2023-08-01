@@ -1,11 +1,11 @@
 <template>
-    <textarea class="form-control box" :placeholder="placeholder" id="floatingTextarea2"
+    <textarea class="form-control box" ref="textareaRef" :placeholder="placeholder" id="floatingTextarea2"
         :value="props.content" @input="handleEmit"></textarea>
 </template>
 
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 interface Props {
     editable?: boolean,
     /**
@@ -14,11 +14,13 @@ interface Props {
     height?: string,
     content?: string,
     placeholder?: string,
+    autofocus?: boolean
 }
 const props = withDefaults(defineProps<Props>(), {
     editable: true,
     height: '70vh',
     content: '',
+    autofocus: true
 })
 
 const emit = defineEmits<{
@@ -26,7 +28,13 @@ const emit = defineEmits<{
     (e: 'change', content: string): void
 }>()
 
-const textAreaContent = ref('')
+const textareaRef = ref<HTMLTextAreaElement>()
+
+onMounted(() => {
+    if (props.autofocus) {
+        textareaRef?.value?.focus()
+    }
+})
 
 
 
