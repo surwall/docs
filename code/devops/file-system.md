@@ -44,5 +44,5 @@ Additionally, we have three special permission: sticky bit(1), setuid(4), setgid
 
 TODO
 
-That is enough for most cases, however, if we want to have a fine-grained control, this is where Access Control Lists(ACLs) come into play.  
+That is enough for most cases, however, if we want to have a fine-grained control, this is where Access Control Lists(ACLs) comes into play.  
 
