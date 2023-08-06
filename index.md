@@ -20,9 +20,8 @@ hero:
 features:
   - title: 网址导航
     link: /websites/
-  - title: windows配置
-    link: /misc/win-setup.md
-    # details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 系统安装与配置
+    link: /code/devops/boot_setup_guide/
   - title: macos配置
     link: /misc/mac-setup.md
   - title: 小工具

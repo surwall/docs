@@ -12,9 +12,10 @@ export const code: Sidebar = [
       { text: 'git', link: '/code/devops/git.md' },
       { text: 'shell', link: '/code/devops/shell.md' },
       { text: 'help system', link: '/code/devops/help-system.md' },
-      {text: 'self host service', link: '/code/devops/self-host-services.md'},
-      {text: 'user management', link: '/code/devops/user-management.md'},
-      {text: 'file system', link: '/code/devops/file-system.md'},
+      { text: 'self host service', link: '/code/devops/self-host-services.md' },
+      { text: 'user management', link: '/code/devops/user-management.md' },
+      { text: 'file system', link: '/code/devops/file-system.md' },
+      { text: 'Boot Setup Guide🚀', link: '/code/devops/boot_setup_guide/' },
     ],
   },
   {

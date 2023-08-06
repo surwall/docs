@@ -1,4 +1,4 @@
-# Clean Windows
+# Windows Setup
 
 As an old Windows user who has experienced Windows XP, Windows 7, Windows 10, and Windows 11, I've observed a recurring issue. Over time, as you install numerous applications, your system tends to slow down when compared to its performance right after a fresh installation. The primary reason behind this slowdown is that a significant portion of the applications you install are not pure or lightweight.
 
@@ -22,9 +22,9 @@ Regarding proprietary programs like Office, VMWare Workstation, and others, it's
 
 From my perspective, the only limitation of using VHD(x) as a normal system is its inability to add hyper-v or any related virtual features. However, VMWare works perfectly fine. Personally, I wouldn't consider using hyper-v or WSL2 again due to the hassle and complexity involved. Why not opt for using virtual machines directly, which is a common practice across various platforms like MacOS, Linux, and even ESXI?
 
-One crucial lesson I've learned in recent years is to avoid using exclusive features or methods. While they might provide some accessibility initially, they can lead to more problems down the line. For example, I used a note-taking app called "Notability," which allowed adding notes to PDFs but stored them in its own format. Initially, it seemed fine, but as I imported larger PDF files, it became cumbersome to work with, and I couldn't easily switch because of important notes. Eventually, I struggled to export the notes back to PDF format. That experience made me realize the value of using standard formats like PDF, despite some limitations. PDF has been stable and can be opened using any PDF app on any platform.
+**One crucial lesson I've learned in recent years is to avoid using exclusive features or methods.** While they might provide some accessibility initially, they can lead to more problems down the line. For example, I used a note-taking app called "Notability," which allowed adding notes to PDFs but stored them in its own format. Initially, it seemed fine, but as I imported larger PDF files, it became cumbersome to work with, and I couldn't easily switch because of important notes. Eventually, I struggled to export the notes back to PDF format. That experience made me realize the value of using standard formats like PDF, despite some limitations. PDF has been stable and can be opened using any PDF app on any platform.
 
-In the case of WSL2 or hyper-v, they are just virtual technologies, and it's essential to understand the fundamentals by using older and more stable technologies like VMWARE or KVM. I've learned not to blindly trust Microsoft's so-called new technologies. On another note, there's the REFS file system, Microsoft's new file system, which is said to be more efficient and reliable than NTFS. However, this also means that there won't be further active development on NTFS, making NTFS even more stable. For me, the key factor is not speed but compatibility.
+In the case of WSL2 or hyper-v, they are just virtual technologies, and it's essential to understand the fundamentals by using older and more stable technologies like VMWARE or KVM. I've learned not to blindly trust Microsoft's so-called new technologies. On another note, there's the REFS file system, Microsoft's new file system, which is said to be more efficient and reliable than NTFS. However, this also means that there won't be further active development on NTFS, making NTFS even more stable. For me, **the key factor is not speed but compatibility**.
 
 I've written another post about this topic, which you can check out. [TODO].
 
@@ -44,5 +44,5 @@ If you're tempted to relocate your desktop or document folder from the C drive t
 
 
 ## Additional Links
-[uefi setup](./uefi-setup.md)
+[uefi setup](./uefi-bootup.md)
 TODO

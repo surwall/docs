@@ -71,7 +71,10 @@ export default defineConfig({
         text: 'misc',
         items: [
           { text: 'mac setup', link: '/misc/mac-setup.md' },
-          { text: 'windows setup', link: '/misc/win-setup.md' },
+          {
+            text: 'windows setup',
+            link: '/code/devops/boot_setup_guide/index.md#windows-setup',
+          },
           { text: 'mathjax', link: '/misc/mathjax.md' },
         ],
       },
@@ -88,5 +91,5 @@ export default defineConfig({
   },
 
   // no need for vite.config.ts
-  vite: {}
+  vite: {},
 })
