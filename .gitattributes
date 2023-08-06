@@ -3,3 +3,5 @@
 *.scss linguist-detectable=false
 *.css linguist-detectable=false
 *.vue linguist-detectable=false
+*.md linguist-detectable=true
+*.md linguist-documentation=false
