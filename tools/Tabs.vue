@@ -13,12 +13,14 @@ import ToolTab from './ToolTab.vue';
 
 import CalculateTextLength from './CalculateTextLength.vue';
 import SearchHub from './SearchHub.vue';
+import SystemTweak from './SystemTweak.vue';
 
 
 
 const tabList = ref<TabItem[]>([
     { title: 'search hub', active: true },
     { title: 'calculate text length', active: false },
+    { title: 'System Tweak', active: false },
     // TODO base64 transform
     // TODO BMI calculate
 ])
@@ -26,6 +28,7 @@ const tabList = ref<TabItem[]>([
 const tabComponents = [
     SearchHub,
     CalculateTextLength,
+    SystemTweak
 ]
 
 onMounted(() => {
