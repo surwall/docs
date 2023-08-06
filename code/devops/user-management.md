@@ -21,7 +21,7 @@ In the same window you previously opened, we can add or delete a group. We have 
 ### Linux
 1. User Management
 In Linux, user info is stored in a file called "etc/passwd". It's a file with root permission, hence, only root can access it. This file looks like this:
-```text
+```txt
 root:x:0:0:root:/root:/bin/zsh
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
