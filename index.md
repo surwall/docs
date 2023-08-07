@@ -8,7 +8,7 @@ hero:
   image:
     src: /logo.jpg
     alt: surwall
-  tagline: Insights
+  tagline: 技术分享 IT技术 好用软件
   actions:
     - theme: brand
       text: 网址导航
@@ -18,14 +18,17 @@ hero:
       link: /code/android/toolchain.md
 
 features:
-  - title: 网址导航
-    link: /websites/
-  - title: 系统安装与配置
-    link: /code/devops/boot_setup_guide/
+  - title: ruby教程
+    link: /misc/ruby.md
+  - title: windows管理
+    link: /misc/manage.md
+  - title: 安卓环境配置
+    link: /code/android/toolchain.md
   - title: macos配置
     link: /misc/mac-setup.md
-  - title: 小工具
-    link: /tools/index.md
+  - title: windows配置
+    link: /misc/windows_software_recommendations.md
+
 ---
 
 <style lang="css">

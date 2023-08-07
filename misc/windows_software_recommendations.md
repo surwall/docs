@@ -1,5 +1,4 @@
-# Windows Software Recommendations
-In this article, we'll provide a curated list of essential software recommendations to enhance your Windows experience after completing the initial setup. These tools will help you with productivity, security, multimedia, and more, ensuring that you get the most out of your Windows system.
+# Windows软件配置
 
 ## prerequsites
 

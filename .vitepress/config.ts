@@ -63,22 +63,6 @@ export default defineConfig({
       // text: '编辑此页面',
       pattern: 'https://github.com/surwall/docs/edit/main/:path',
     },
-    nav: [
-      { text: 'economics', link: '/economics' },
-      { text: 'code', link: '/code/' },
-      { text: 'math', link: '/math/' },
-      {
-        text: 'misc',
-        items: [
-          { text: 'mac setup', link: '/misc/mac-setup.md' },
-          {
-            text: 'windows setup',
-            link: '/code/devops/boot_setup_guide/index.md#windows-setup',
-          },
-          { text: 'mathjax', link: '/misc/mathjax.md' },
-        ],
-      },
-    ],
 
     // 侧边栏匹配
     sidebar: {
