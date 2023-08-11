@@ -2,7 +2,7 @@
     <div class="wrap" :class="{active: props.active}">
         <input @keydown.enter="search" v-model="searchContent" 
         ref="inputRef"
-        class="form-control" type="search" placeholder="Search"
+        class="input" type="search" placeholder="Search"
             aria-label="Search">
         <select class="form-select" aria-label="Default select example">
             <option v-for="item in options">{{ item }}</option>
@@ -102,5 +102,9 @@ function openLink(link) {
 .form-select {
     margin: 0 10px;
     width: min-content;
+}
+
+.input {
+    border: 1px solid black;
 }
 </style>

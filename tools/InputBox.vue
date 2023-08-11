@@ -53,6 +53,9 @@ function handleEmit(event: Event) {
     /* border: 1px solid black; */
     margin-bottom: 25px;
     height: v-bind('props.height');
+    border: 1px solid black;
+    display: flex;
+    width: 100%;
 }
 </style>
 
