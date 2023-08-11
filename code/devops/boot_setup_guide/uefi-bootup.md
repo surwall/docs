@@ -97,7 +97,78 @@ sudo grub-install --efi-directory=/mnt/boot/efi /dev/sda1 # the last argument is
 
 ## Edit Boot Entries on Grub
 
-[TODO]
+use `efibootmgr` to see boot orders
+
+```bash
+sudo efibootmgr
+```
+
+![](https://oss.xuchaoyin.com/docs/Selection_002.png)
+
+To change the order you can
+
+```bash
+sudo efibootmgr -o 0,1,4,9
+```
+
+Note that it may not work due some UEFI firmware aren't standard.
+
+
+
+We're back to Grub. There are two kinds of grub config: **GRUB Menus**, **GRUB Default Behavior**. They located at `/etc/grub.d` and `/etc/defautl/grub`, respectively. 
+
+Right now, we're interested in modifying the grub menus, there are several files inside that `/etc/grub.d`. 
+
+![](https://oss.xuchaoyin.com/docs/Selection_003.png)
+
+When we use `update-grub` to update our configs, it will compile those scattered files into a big grub config. You might notice that they all follow the same convention that their name start with a number. That number determines the order when they are compiled. So you always see the linux menu entry first, then any other custom ones. Because we would edit that `40_custom` file, 40 is way behind that `10_linux_zf`. So you might create a new file called `01_my_menu`, in that way, our custom menu can show up at first. 
+
+Let us edit that `40_custom` file, in that file, it looks like this:
+
+```bash
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+
+```
+
+If you wanna append a custom windows entry, you don't need to manually write it. When we installed our  Linux system, it will run `30_os-prober`script(also any other files in this `/etc/grub.d/*`) to generate grub config. That script can auto detect Windows bootloader, and generate an menu entry for it. So we can check that by looking at the generated grub config at `/boot/grub/grub.cfg`. You will find a paragraph similar to this:
+
+```bash
+......
+
+menuentry 'Windows Boot Manager (on /dev/nvme1n1p2)' --class windows --class os $menuentry_id_option 'osprober-efi-9C83-8340' {
+        savedefault
+        insmod part_gpt
+        insmod fat
+        search --no-floppy --fs-uuid --set=root 9C83-8340
+        chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+}
+
+....
+```
+
+We just need to grab that and paste into the bottom of`40_custom`, tweak a little if you like. Note that line `savedefault`, that line is important if we wanna GRUB remember our menu selection. 
+
+Next, we edit the default behavior config `/etc/default/grub`, edit two lines if they doesn't exist, add it.
+
+```bash
+GRUB_DEFAULT=saved
+GRUB_SAVEDEFAULT=true
+```
+
+The first line will ensure that it remembers our last selection, if your prefer a permanent selection, you can change that to 
+
+```bash
+GRUB_DEFAULT=0
+GRUB_DEFAULT="My Windows"
+```
+
+These are two styles, first says that the 0 entry (which clearly means first entry) will be selected, the second says that the menu entry with name "My Windows" will be selected.
+
+**That's it, don't forget to run `update-grub` after you modify grub config.** Reboot and Test it out.
 
 
 
@@ -113,6 +184,6 @@ bcdedit
 
 
 
-## Customize Grub Menu and Look
+## Customize Grub Look
 
 [TODO]
