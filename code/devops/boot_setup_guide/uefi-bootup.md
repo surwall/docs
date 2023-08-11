@@ -22,3 +22,97 @@ As for UEFI, when we boot up our machines, UEFI firmwares follows up the boot or
 When an operating system is successfully booted using a bootloader (e.g., `/EFI/ubuntu/grubx64.efi`), the bootloader or the operating system itself can create a boot entry in the UEFI firmware's Non-Volatile Random Access Memory (NVRAM). This boot entry includes information about the bootloader's location and other relevant details.
 
 By storing boot entries in the UEFI NVRAM, the firmware can streamline the boot process and directly load the desired operating system or bootloader, enhancing the efficiency and user experience of the system startup.
+
+
+
+### Side Note
+
+The boot process on mobile resembles that of PCs. You have heard that mobile manufactures provide options for customers to unlock BL(boot loader). The pre-installed bootloader can only boot their approved ROM, so in that case, you can't boot other ROM. In order to do that, we have to unlock BL, replace existing boot loader with more open one, namely, TWRP. This alternative bootloader empowers installing tailored ROMs, customizing OS experiences. Notably, dual-boot setups become feasible, accommodating diverse OS coexistence.
+
+## Bootloader Rescue
+
+We know that bootloaders are located at ESP partition, what if we accidentally remove some core files that our system can't boot up. We need to fix that. This really depends on what bootloader your are using, GRUB or Windows Boot Manager. 
+
+Imagine a typical dual-boot situation like this:
+
+![](https://oss.xuchaoyin.com/docs/%E5%BC%95%E5%AF%BC%E4%BF%AE%E5%A4%8D%E8%AF%B4%E6%98%8E.svg)
+
+You normally set grub the first bootloader in the boot list. If you wanna completely remove ubuntu, you not only need to remmove the ubuntu partition, but also remove boot loader code in ESP partition. In this case, we need to remove that `/EFI/ubuntu` folder. That default boot loader `/EFI/boot/bootx64.efi` is a shim that points to the bootloader inside ubuntu folder. So we also need to remove that completely, and let Windows regenerate default bootloader for us. 
+
+
+
+## Fix Windows Boot Loader
+
+How to do that? Open your powershell or CMD, type `bcdboot C:\Windows`, this will not only generate default bootloader, but if you miss any thing in `/EFI/Microsoft`, it will also fix that for you. If your C:\Windows Partition and ESP partition are not on the same disk, you need to tweak this command a little. For example, you first mount this esp partition to letter G(choose whatever letter you like) `, open you CMD:
+
+* type `diskpart` to start the DiskPart Utility
+* List all the disks `list disk`
+* Select the disk where the ESP is located: `select disk N`
+* List the partitions on the selected disk `select partition 1`
+* Assign a letter (for example, "G") `assign letter=G`
+
+Run `bcdboot C:\Windows /s G:`  /s specifies the target location where the bootloader files should be created. In this case, it's the ESP mounted as letter `G:`. 
+
+
+## Fix Linux Boot loader
+
+As for linux, if we accidentally delete bootloader in Linux. We need to regenerate that. We use command
+
+```bash
+sudo grub-install
+sudo update-grub
+```
+
+This will regenerate bootloader at ESP and regenerate grub config file. 
+
+There's a extreme case that your ubuntu won't even boot up, in that case, we need to prepare a USB stick that contains ubuntu iso. 
+
+1. Find your machine’s root partition:
+
+```bash
+sudo fdisk -l | grep "Linux filesystem$"
+```
+
+![](https://oss.xuchaoyin.com/docs/find-root-partition-ubuntu.webp)
+
+2. mount linux root partition
+
+```bash
+sudo mount /dev/sda1 /mnt
+```
+
+3. mount esp partition inside that root path
+
+```bash
+sudo mount /dev/sdb1 /mnt/boot/efi
+```
+
+4. install grub by specifying these two places
+
+```bash
+sudo grub-install --efi-directory=/mnt/boot/efi /dev/sda1 # the last argument is the root partition
+```
+
+
+
+## Edit Boot Entries on Grub
+
+[TODO]
+
+
+
+## Edit Boot Entries on Windows Boot Manager
+
+Windows Boot Manager are capable of booting multiple version of Windows, it reads its configuration file called BCD. To modify this file we using following command:
+
+```powershell
+bcdedit
+```
+
+[TODO]
+
+
+
+## Customize Grub Menu and Look
+
+[TODO]
