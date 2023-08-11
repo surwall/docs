@@ -6,7 +6,7 @@ Welcome to the Boot Setup Guide! This guide covers various topics related to boo
 - [UEFI and Boot Process](uefi-bootup.md)
 
 ## Linux Setup
-- [Customizing GRUB2 Settings](grub2-settings.md)
+- [Linux Desktop Setup](linux-desktop-setup.md)
 
 ## Windows Setup
 - [Setting Up a Clean Windows System](windows-setup.md)
