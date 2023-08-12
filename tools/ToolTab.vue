@@ -36,5 +36,10 @@ function change(index: number) {
 <style lang="scss" scoped>
 .nav {
     margin-bottom: 20px;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px;
 }
 </style>

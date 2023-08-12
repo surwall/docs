@@ -116,7 +116,7 @@ The `!` symbol is used as a shorthand to execute shell commands from within Vim.
 
 ### `%` Symbol
 
-In Normal mode, the percent sign is used to move the cursor to the matching opening or closing bracket/parenthesis.
+In Normal mode, the percent sign is used to move the cursor to the matching opening or closing bracket/parenthesis/curly braces.
 
 In command-line mode, the percent sign is used as a placeholder for the current file path (e.g., `:w %` to write the current file).
 
