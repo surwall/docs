@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Surwall's的个人博客"
+  name: "许超寅的个人博客"
   # text: "A Programmer's Blog"
   image:
     src: /logo.jpg
@@ -18,8 +18,8 @@ hero:
       link: /code/android/toolchain.md
 
 features:
-  - title: 网址导航
-    link: /websites/
+  - title: docker tutorial
+    link: /code/devops/docker-mastery.md
   - title: 系统安装与配置
     link: /code/devops/boot_setup_guide/
   - title: macos配置
