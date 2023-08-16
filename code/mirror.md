@@ -4,6 +4,7 @@ In China, because of the GREAT WALL, any Internet connection to abroad servers w
 
 The following are just a list of all mirrors in China:
 
+1. [大学镜像集合](https://mirrors.cernet.edu.cn/list)
 1. [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/) 
 2. [腾讯软件源](https://mirrors.tencent.com/)
 3. [阿里巴巴开源镜像站](https://developer.aliyun.com/mirror/) (rate limit of 2MB)
@@ -11,13 +12,8 @@ The following are just a list of all mirrors in China:
 
 
 
-
-
 ## Python
-
-[TODO]
-
-
+In Python, pip is the package manager.
 
 ## NODEJS
 

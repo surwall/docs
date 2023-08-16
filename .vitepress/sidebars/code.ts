@@ -16,6 +16,7 @@ export const code: Sidebar = [
       { text: 'user management', link: '/code/devops/user-management.md' },
       { text: 'file system', link: '/code/devops/file-system.md' },
       { text: 'Boot Setup Guide🚀', link: '/code/devops/boot_setup_guide/' },
+      {text: 'Network Setup', link: '/code/devops/network-setup.md'}
     ],
   },
   {

@@ -49,16 +49,21 @@ function disableWindowsUpdateHandler() {
     copyToClipboard(disableWindowsUpdate())
 }
 
-function downloadShim() {
+async function downloadShim() {
     // read the binary data from shim.exe
     if (path.value.trim()) {
         if (!binName.value.endsWith('.exe')) {
             return alert('binName should end with .exe')
         }
-        // let fileName = path.value + '.exe'
-        let fileNameWithExtension = path.value.split('\\').pop();
+
+        let url = 'https://oss.xuchaoyin.com/programs/shim.exe'
+        const res = await fetch(url)
+        const resBlob = await res.blob()
+        let resPath = URL.createObjectURL(resBlob)
+        
         let link = document.createElement('a')
-        link.href = 'https://oss.xuchaoyin.com/programs/shim.exe'
+        link.href = resPath
+
         link.download = binName.value
         link.click()
 

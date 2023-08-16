@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "许超寅的个人博客"
+  name: "surwall的个人博客"
   # text: "A Programmer's Blog"
   image:
     src: /logo.jpg
