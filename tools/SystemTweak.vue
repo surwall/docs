@@ -58,7 +58,7 @@ function downloadShim() {
         // let fileName = path.value + '.exe'
         let fileNameWithExtension = path.value.split('\\').pop();
         let link = document.createElement('a')
-        link.href = 'shim.exe'
+        link.href = 'https://oss.xuchaoyin.com/programs/shim.exe'
         link.download = binName.value
         link.click()
 
