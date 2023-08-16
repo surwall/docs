@@ -38,6 +38,13 @@ Normally, at the end of each man page, there's a section called "SEE ALSO". This
 
 You can type `--help` for almost all commands. Some commands have specific help that provides additional details about their usage, such as `-h`.
 
+### forget a specific command
+You can use the `apropos` command to search for commands or topics related to a specific keyword.
+It's particularly useful when you remember a general concept or keyword but can't recall the exact command name. This command will search through the manual pages' short descriptions and displays a list of relevant commands or topics.
+```bash
+apropos partition
+```
+This will list various commands which contains 'partition' in its description, such as 'fdisk', 'parted', 'gparted', and others. 
 
 
 ## Windows

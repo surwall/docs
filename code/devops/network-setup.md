@@ -53,9 +53,9 @@ To apply the changes without try, you can use `sudo netplan apply`.
 
 
 
-## Debia
+## Debian
 
-For Debian, which is a old distro, it continues to use `NetworkManager` as its tool to manage network. Its configuration files store at `/etc/networks/interfaces/*`.
+For Debian, which is a old distro, it continues to use `NetworkManager` as its tool to manage network. Its configuration files store at `/etc/networks/interfaces/*`. If you don't provide a config file, it will use DHCP to obtain IP addresses and network settings.
 
 To set a static IP address for an interface named `ens33`, you can use the following configuration:  
 
