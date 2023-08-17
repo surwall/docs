@@ -13,7 +13,15 @@ The following are just a list of all mirrors in China:
 
 
 ## Python
-In Python, pip is the package manager.
+In Python, pip is the deafult package manager. The config file for it is store at `%appdata%/pip/pip.ini`on Windows or `$HOME/.config/pip/pip.conf` on Linux.
+
+This command will set pip to download packages from mirrors:  
+
+```bash
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+
 
 ## NODEJS
 

@@ -7,3 +7,5 @@ So, we are not learning any syntax, because syntax are similar, but we are going
 
 For languages like Java, and NodeJS. Those are file-based. Each file is a module, if you wanna use it elsewhere, you have to explicitly import it. 
 
+I wanna give a specific attention for c and c++. They are special among all the programming languages. Because most major systems are built by these two languages. Most system call is actually header file. So if you wanna implement some low-level functionality, you have to use c or c++. 
+
