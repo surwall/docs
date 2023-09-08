@@ -14,6 +14,7 @@ import ToolTab from './ToolTab.vue';
 import CalculateTextLength from './CalculateTextLength.vue';
 import SearchHub from './SearchHub.vue';
 import SystemTweak from './SystemTweak.vue';
+import URLHub from './URLHub.vue';
 
 
 
@@ -21,6 +22,7 @@ const tabList = ref<TabItem[]>([
     { title: 'search hub', active: true },
     { title: 'calculate text length', active: false },
     { title: 'System Tweak', active: false },
+    { title: 'URL Hub', active: false },
     // TODO base64 transform
     // TODO BMI calculate
 ])
@@ -28,7 +30,8 @@ const tabList = ref<TabItem[]>([
 const tabComponents = [
     SearchHub,
     CalculateTextLength,
-    SystemTweak
+    SystemTweak,
+    URLHub
 ]
 
 onMounted(() => {
@@ -40,7 +43,6 @@ onUnmounted(() => {
 })
 
 function handleSwitchTabKey(event: KeyboardEvent) {
-    console.log(event)
     if (event.altKey) {
         event.preventDefault()
         console.log(event.key)
@@ -49,6 +51,8 @@ function handleSwitchTabKey(event: KeyboardEvent) {
             if (targetIndex <= tabComponents.length - 1) {
                 handleChange(targetIndex)
             }
+        } else {
+            
         }
     }
 }
