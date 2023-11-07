@@ -6,10 +6,11 @@
   },
   "devDependencies": {
     "sass": "^1.64.1",
-    "vitepress": "^1.0.0-beta.1"
+    "vitepress": "^1.0.0-rc.25"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "markdown-it-mathjax3": "^4.3.2"
-  }
+  },
+  "type": "module"
 }

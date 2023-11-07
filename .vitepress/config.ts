@@ -1,8 +1,5 @@
 import { defineConfig } from 'vitepress'
 import { websites, math, code } from './sidebars'
-import mathjax3 from 'markdown-it-mathjax3'
-
-const customElements = ['mjx-container']
 
 
 // https://vitepress.dev/reference/site-config
@@ -14,16 +11,8 @@ export default defineConfig({
   /* markdown 配置 */
   markdown: {
     lineNumbers: true,
-    config: (md) => {
-      md.use(mathjax3)
-    },
-  },
-  vue: {
-    template: {
-      compilerOptions: {
-        isCustomElement: (tag) => customElements.includes(tag),
-      },
-    },
+    math: true,
+    theme: 'one-dark-pro'
   },
   head: [
     [
