@@ -56,6 +56,7 @@ export default defineConfig({
             link: '/code/devops/boot_setup_guide/index.md#windows-setup',
           },
           { text: 'mathjax', link: '/misc/mathjax.md' },
+          { text: 'sync', link: 'misc/sync.md'}
         ],
       },
     ],
