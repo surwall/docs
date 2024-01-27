@@ -23,7 +23,7 @@
 | 邮件管理      | `brew install --cask readdle-spark` / [APP STORE] |                       |
 | NTFS读取      | `brew install --cask mounty`                      |                       |
 | 远程桌面      | `brew insta ll --cask microsoft-remote-desktop`   |                       |
-| 词典          | `brew install --cask eudic`                       | [欧陆词典](#欧陆词典) |
+| 词典          | `brew install --cask eudic`                       | [欧陆词典](https://www.eudic.net/v4/en/app/eudic/) |
 | BT下载        | `brew install --cask c0re100-qbittorrent`         |                       |
 | 游览器        | `brew install --cask google-chrome `              |                       |
 | 浏览器        | `brew install --cask firefox-esr`                 |                       |
@@ -33,7 +33,7 @@
 | 百度网盘      | [APP STORE]百度网盘                               |                       |
 | 通讯聊天      | [APP STORE]微信                                   |                       |
 | todo          | [APP STORE]滴答清单                               |                       |
-| 终端          | `brew install --cask iterm2`                      | [Iterm2](#Iterm2)     |
+| 终端          | `brew install --cask iterm2`                      | [Iterm2](https://iterm2.com/) |
 | 设置urlscheme | `brew install --cask swiftdefaultappsprefpane`    | 比如 vlc://           |
 | 分屏          | `brew install --cask rectangle`                   |                       |
 | 友好cat       | `brew install bat`                                | 可高亮文本            |

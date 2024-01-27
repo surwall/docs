@@ -22,7 +22,7 @@ In this article, we'll provide a curated list of essential software recommendati
 
 | 用途           | 安装                                                    | 备注                 |
 | -------------- | ------------------------------------------------------- | -------------------- |
-| 系统tweak      | 百度云dism++                                            | [Dism++](#Dism++)    |
+| 系统tweak      | 百度云dism++                                            | [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language) |
 | 下载工具       | `winget install Tonec.InternetDownloadManager`          | 激活                 |
 | 软件卸载       | `winget install GeekUninstaller.GeekUninstaller`        |                      |
 | 压缩、解压缩   | 百度云bandizip                                          |                      |
@@ -36,7 +36,7 @@ In this article, we'll provide a curated list of essential software recommendati
 | 代码编辑       | `winget install Microsoft.VisualStudioCode`             |                      |
 | 磁盘占用分析   | `winget install AntibodySoftware.WizTree`               |                      |
 | 右键菜单管理   | 百度云 ContextMenuManager                               |                      |
-| markdown       | `winget install appmakes.Typora`                        | [Typora](#Typora)    |
+| markdown       | `winget install appmakes.Typora`                        | [Typora](https://typoraio.cn/) |
 | epub,cbr,DjVu  | `winget install SumatraPDF.SumatraPDF`                  |                      |
 | 视频播放       | `winget install VideoLAN.VLC`                           | 设置                 |
 | 视频播放       | `winget install Daum.PotPlayer`                         |                      |
