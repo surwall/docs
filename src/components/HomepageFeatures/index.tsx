@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-  description: JSX.Element;
+  description: React.JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
@@ -16,6 +16,8 @@ const FeatureList: FeatureItem[] = [
       <>
         Docusaurus was designed from the ground up to be easily installed and
         used to get your website up and running quickly.
+
+        xxxxxxxxxxxxxxxxxxxxxxx
       </>
     ),
   },
@@ -55,7 +57,7 @@ function Feature({title, Svg, description}: FeatureItem) {
   );
 }
 
-export default function HomepageFeatures(): JSX.Element {
+export default function HomepageFeatures(): React.JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">

@@ -1,8 +1,10 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
+
 
 const config: Config = {
   title: "Surwall's Blog",
@@ -10,7 +12,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://docs.xuchaoyin.com',
+  url: 'https://surwall.netlify.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -46,20 +48,14 @@ const config: Config = {
       'classic',
       {
         docs: {
+          beforeDefaultRemarkPlugins: [remarkGithubAdmonitionsToDirectives],
+          path: 'docs',
           sidebarPath: './sidebars.ts',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -68,7 +64,17 @@ const config: Config = {
     ],
   ],
 
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ['@docusaurus/theme-mermaid',
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      ({
+        hashed: true,
+        language: ["en", "zh"],
+
+      })
+    ]
+
+  ],
   markdown: {
     mermaid: true,
   },
@@ -76,45 +82,42 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
+      hideOnScroll: true,
       title: 'Surwall',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
       items: [
+        // blog
+        { to: '/blog', label: 'BLOG', position: 'right' },
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'CODE',
+          type: 'dropdown', label: 'Windows',
+          items: [
+            { type: 'doc', docId: 'windows-script/PowerShell-Scripting-CrashCourse', label: 'PWSH' },
+            { type: 'docSidebar', sidebarId: 'winGuiSidebar', label: 'Windows Gui Dev' },
+            { type: 'docSidebar', sidebarId: 'winSetupSidebar', label: 'Windows Setup'}
+          ]
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'economicsSidebar',
-          label: 'ECONOMICS',
+          type: 'dropdown', label: 'Softwares',
+          items: [
+            {type: 'docSidebar', sidebarId: 'softwaresSidebar', label: 'Softwares'},
+            {type: 'docSidebar', sidebarId: 'majorsoftwaresSidebar', label: 'Major Softwares'},
+            {type: 'docSidebar', sidebarId: 'appsSidebar', label: 'Android Apps'},
+          ]
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'mathSidebar',
-          label: 'MATH'
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'miscSidebar',
-          label: 'MISC'
-        },
-
-        {to: '/blog', label: 'BLOG', position: 'left'},
+          type: 'dropdown', label: 'Linux',
+          items: [
+            {type: 'docSidebar', sidebarId: 'linuxadminSidebar', label: 'Linux Administration'},
+            {type: 'docSidebar', sidebarId: 'linuxdesktopSidebar', label: 'Linux Desktop'},
+          ]
+        }
       ],
     },
-    algolia: {
-      // The application ID provided by Algolia
-      appId: 'Z1XLFKCKDN',
-      // Public API key: it is safe to commit it
-      apiKey: 'c10fda5ca69e614cec97a98a6ffda68d',
-      indexName: 'xuchaoyin'
-    },
-    
+
+
     footer: {
       style: 'dark',
       links: [
@@ -158,7 +161,6 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
