@@ -50,12 +50,15 @@ If you're tempted to relocate your desktop or document folder from the C drive t
 
 
 ## 常见问题
-mtp容易卡死
+### mtp容易卡死
 1. 运行ctrl+r services.msc
-2. 在“服务”窗口内，依次找到“Device Install Service”和“Device Setup Manager”两个选项
+2. 在“服务”窗口内，依次找到“Device Install Service”和“Device Setup Manager”两个选项，设置为自动，并启动。
 
-windows开启mDns
+### windows开启mDns
 ```bash
 REG ADD "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /V "EnableMulticast" /D "0" /T REG_DWORD /F
 ```
+
+### win7运行win10软件
+VxKex 可以让你的 Windows 7 系统焕发第二春，它能让那些只能在 Windows 8、8.1 和 10 上运行的应用程序也能在 Windows 7 上运行。
 
