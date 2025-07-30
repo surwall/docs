@@ -21,7 +21,7 @@ Both RPM and the apt system back up old files before installing an updated packa
 
 ## Package System
 [apt package system](apt%20package%20system.md)
-[Alpine-User-Guide](Alpine-User-Guide.md#Package%20Manager)
+[Alpine-User-Guide](Alpine-User-Guide.md#package-manager)
 
 
 ## Compiling Softwares

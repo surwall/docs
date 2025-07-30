@@ -59,7 +59,7 @@ Sometimes we can shorten above example into one line:
 if [ "$x" -eq 5 ]; then echo "equals 5"; else echo "does not equal 5."; fi
 ```
 
-You might wonder what those brackets mean, let's put it aside. After the `if` keyword, you provide a command, every [Bash-Scripts](#Command%20Line%20Structure) (including shell functions) issue a integer between 0 to 255 to the system. By convention, 0 indicates success and any other value indicates failure. We can examine the exit status of last executed command by `$?`. 
+You might wonder what those brackets mean, let's put it aside. After the `if` keyword, you provide a command, every command (including shell functions) issue a integer between 0 to 255 to the system. By convention, 0 indicates success and any other value indicates failure. We can examine the exit status of last executed command by `$?`. 
 
 The shell provides two builtin commands, `true` and `false`, that do nothing except return a 0 or 1 exit status. 
 

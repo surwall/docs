@@ -13,7 +13,7 @@ Cmdlets are not limited to PowerShell commands, you can create an `.exe` which i
 
 ## Command Line Structure
 
-PowerShell has a similar structure with [Bash](../devops/1-linux/administration/Bash.md). The structure can be expresses as the following:
+PowerShell has a similar structure with [Bash](../linux-admin/shell/bash.md). The structure can be expresses as the following:
 
 ```powershell
 command [-options] [<CommonParameters>]
@@ -265,6 +265,6 @@ https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/ab
 
 ## See More
 
-[PowerShell Examples](./PowerShell%20Examples.md)
-[PowerShell-Scripting](./PowerShell-Scripting.md)
-[PowerShell-Scripting-CrashCourse](./PowerShell-Scripting-CrashCourse.md)
+[PowerShell Examples](powershell-examples.md)
+[PowerShell-Scripting](./powershell-scripting.md)
+[PowerShell-Scripting-CrashCourse](./powershell-scripting-crashcourse.md)

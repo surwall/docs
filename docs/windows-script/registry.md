@@ -1,5 +1,7 @@
 ## Structure of Registry
 
+^3c7f5a
+
 Prior to Windows Registry, Windows use `.ini` files to store settings. Clearly Windows Registry is better for central management. Windows Registry is more like a node Tree or a database. Each node in the tree is called a key, you can access that key using registry path like `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\`. 
 And each node has properties attached to it.
 ![](assets/registry-preview.png)
@@ -13,4 +15,4 @@ Note that each key can have subkey, so if you have a key like `HKEY_LOCAL_MACHIN
 
 :::important
 Although you can `cd` into registry using `HKLM:\` in PowerShell, and you might use `ls` to show all sub keys(node).  
-However, to get all properties associated with this key(node), you have to use a separate command. Check more on [PowerShell Examples](PowerShell%20Examples.md#registry%20trees).
+However, to get all properties associated with this key(node), you have to use a separate command. Check more on [PowerShell Examples](powershell-examples.md#registry-trees).

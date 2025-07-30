@@ -47,3 +47,15 @@ If you're tempted to relocate your desktop or document folder from the C drive t
   * choose Ohook for Office Activation
   * choose 
 
+
+
+## 常见问题
+mtp容易卡死
+1. 运行ctrl+r services.msc
+2. 在“服务”窗口内，依次找到“Device Install Service”和“Device Setup Manager”两个选项
+
+windows开启mDns
+```bash
+REG ADD "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /V "EnableMulticast" /D "0" /T REG_DWORD /F
+```
+

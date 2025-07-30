@@ -1,7 +1,7 @@
 ## overview
 There are two kinds of tools to manage packages. One is an high-level package called `apt-*`, another is called `dpkg`.
 The relations are like this:
-![](assets/apt-package-system.svg)
+![](apt-package-system.svg)
 `apt`, `aptitude` and `synaptic` is a command line, text-based interface, and graphical interface, respectively.
 
 1. `apt-get` for downloading and removing packages

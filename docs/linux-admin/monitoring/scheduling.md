@@ -94,7 +94,7 @@ You can specify multiple value in a segment separated by `,` or specify a range 
 
 ### Cron Access Control
 
-Two config files specify which users may submit crontab files. They are /etc/cron.{allow,deny}.
+Two config files specify which users may submit crontab files. They are `/etc/cron.{allow,deny}`.
 
 If the cron.allow file exists, then it contains a list of all users that may submit crontabs, one per line. 
 

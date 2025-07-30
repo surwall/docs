@@ -38,6 +38,4 @@
 
 
 ## Specific Settings
-
-1. [VsCode for Java](../devops/2-programming/java/VsCode%20for%20Java.md)
-2. 
+vscode for java

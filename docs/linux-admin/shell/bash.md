@@ -257,7 +257,7 @@ ls -l $(which cp)
 file $(ls -d /usr/bin/* | grep zip)
 ```
 
-Note that the inner command is executed in subshell, so if won't affect the outer shell by assigning variables. It is interesting to note that if the output of that command contains linefeed, it would be interpreted as multiple arguments just like space because of [Bash](#Word%20Splitting). 
+Note that the inner command is executed in subshell, so if won't affect the outer shell by assigning variables. It is interesting to note that if the output of that command contains linefeed, it would be interpreted as multiple arguments just like space because of [Word Splitting](#word-splitting). 
 
 #### Escape Sequence Expansion
 
@@ -308,7 +308,7 @@ Quoting allows us to embed space in one argument otherwise it will be interprete
 
 By default, word-splitting looks for the presence of spaces, tabs, and **newlines**(line feed) and treats them as delimiters between words. This means those characters are considered as separators.  If you have two or more space between your arguments, there would be no difference. 
 
-The fact that newlines are considered delimiters by this mechanism causes an interesting, albeit subtle, effect on  [Bash](#Command%20Substitution). Consider the following:
+The fact that newlines are considered delimiters by this mechanism causes an interesting, albeit subtle, effect on  [Bash](#command-substitution). Consider the following:
 
 ```bash
 $ echo $(cal)
@@ -541,7 +541,7 @@ printenv | less
 set | less # it can also print user-defined shell functions
 ```
 
-Environment variables are user-defined, on the other hand, **shell variables** are provided by the shell like `$0`. They are largely indistinguishable. Of all the environment variables, `$PATH` is the special one. Previously, when we talk about [Bash](#Command%20Line%20Structure), if the command is an executable or a shell script, you need to specify it as full path or relative path, if you don't provide a path, but just a name, it will try to search through the value stored in the `$PATH`, which is a colon-separated list of directories. It search those directories in order, so place your custom directory before anything else by the command `export $PATH=~/bin:$PATH`. 
+Environment variables are user-defined, on the other hand, **shell variables** are provided by the shell like `$0`. They are largely indistinguishable. Of all the environment variables, `$PATH` is the special one. Previously, when we talk about [Bash](#command-line-structure), if the command is an executable or a shell script, you need to specify it as full path or relative path, if you don't provide a path, but just a name, it will try to search through the value stored in the `$PATH`, which is a colon-separated list of directories. It search those directories in order, so place your custom directory before anything else by the command `export $PATH=~/bin:$PATH`. 
 
 > [!TIP]
 >
@@ -567,4 +567,4 @@ Environment variables are user-defined, on the other hand, **shell variables** a
 > foo=1 bar=2 bash -c 'echo $foo - $bar '
 > ```
 
-[Bash-Scripts](Bash-Scripts.md)
+[Bash-Scripts](bash-scripts.md)

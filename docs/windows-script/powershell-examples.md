@@ -109,7 +109,7 @@ There list some common one:
 | where | Where-Object   | filter      |
 
 ## Registry Trees
-[Registry](Registry.md#Structure%20of%20Registry)
+[registry](registry.md)
 Display `HKEY_CURRENT_USER` registry hive
 
 ```powershell

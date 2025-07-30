@@ -5,13 +5,13 @@ sidebar_label: Linux Administration
 
 ## Shell and Help
 We mainly use command line to manage Linux. We first need to understand How Bash works. 
-1. [Bash](Bash.md)
-2. [Bash-Scripts](Bash-Scripts.md)
-3. [Bash-configuration](Bash-configuration.md)
-4. [Zsh](Zsh.md)
+1. [Bash](shell/bash.md)
+2. [Bash-Scripts](shell/bash-scripts.md)
+3. [Bash-configuration](shell/bash-configuration.md)
+4. [Zsh](shell/zsh.md)
 
 After familiarizing with Bash, and since there are numerous commands out there. In Linux, we have manuals to reference those commands. There are two types of manuals, one is called man, another is called info.
-[Man Tutorial](Man%20Tutorial.md)
+[Man Tutorial](shell/man-tutorial.md)
 
 Each Linux vendors has their own documentation.
 1. [The Debian Administrator's Handbook](https://debian-handbook.info/browse/stable/)
@@ -25,60 +25,51 @@ You can also find out books related to Linux on [O'Reilly](https://www.amazon.co
 A simplified view of the boot process looks like this:
 
 ![](assets/boot-process.svg)  
-[BIOS and UEFI](BIOS%20and%20UEFI.md)
+
+[BIOS and UEFI](bootstrap/bios-uefi.md)
 
 In Linux, we exclusively use `Grub2` as our bootloader. The bootloader normally can recognize some file system. As for Grub, it can recognize *ext4*, so we can put kernel images in `ext4` format file system.  
 As for init process, systemd becomes the new init replant the old Sysinit. 
-[Grub](Grub.md)
-[init-system](init-system.md)
-[Systemd](Systemd.md)
-
+[Grub](bootstrap/grub.md)  
+[init-system](bootstrap/init-system.md)  
+[Systemd](bootstrap/systemd.md)  
+[systemd-units-example](bootstrap/systemd-units-example.md)  
 ## Disk and FileSystem
-[Disk-and-FileSystem](Disk-and-FileSystem.md)
-- [x] network file system ✅ 2024-11-02
-- [x] network storage, NFS, SMB ✅ 2024-11-02
-[samba](samba.md) 
+[Disk-and-FileSystem](disk-fs/disk-filesystem.md) 
+[samba](disk-fs/samba.md)  
 ## Access Control
-[super-user](super-user.md)
-[user-management](user-management.md)  
-[file-type-and-file-mode](file-type-and-file-mode.md)
+[super-user](access-control/super-user.md)  
+[user-management](access-control/user-management.md)  
+[file-type-and-file-mode](access-control/file-type-and-file-mode.md)  
 ## Process, Scheduling, and Monitoring
-[process](process.md)
-[scheduling](scheduling.md)
-- [x] monitoring system ✅ 2024-11-02
-[monitoring-sytem.md](monitoring-sytem.md.md) 
-- [x] mange machine states ✅ 2024-11-02
-## Logging
-[Logging](Logging.md)
-
+[process](monitoring/process.md)  
+[scheduling](monitoring/scheduling.md)  
+[Logging](monitoring/logging.md)  
 ## Common Commands
 
-| command                                                    | usage                         |
-| ---------------------------------------------------------- | ----------------------------- |
-| [grep](../commands/grep.md)                                | filter lines                  |
-| [awk](../commands/awk.md)                                  | handle table data             |
-| [sed](../commands/sed.md)                                  | handle lines,insert or delete |
-| [tar](../commands/tar.md)                                  | archive, uncompress           |
-| [strace](../commands/strace.md)                            | find sytem calls of a process |
-| [curl](../commands/curl.md)                                | get http response             |
-| [wget](../commands/wget.md), [aria2](../commands/aria2.md) | download utility              |
-| [nmap](../commands/nmap.md)                                | scan ports                    |
-|                                                            |                               |
-|                                                            |                               |
+| command                                                  | usage                         |
+| -------------------------------------------------------- | ----------------------------- |
+| [grep](./commands/grep.md)                               | filter lines                  |
+| [awk](./commands/awk.md)                                 | handle table data             |
+| [sed](./commands/sed.md)                                 | handle lines,insert or delete |
+| [tar](./commands/tar.md)                                 | archive, uncompress           |
+| [strace](./commands/strace.md)                           | find sytem calls of a process |
+| [curl](./commands/curl.md)                               | get http response             |
+| [wget](./commands/wget.md), [aria2](./commands/aria2.md) | download utility              |
+| [nmap](./commands/nmap.md)                               | scan ports                    |
 
 ## Software Installation
-[software-installation](software-installation.md)  
-[apt package system](apt%20package%20system.md)
-- [x] rpm package system ✅ 2024-11-02
-[arch package system](../../1a-linux-desktop/arch%20package%20system.md)
+[software-installation](installation/software-installation.md)
+[apt package system](installation/apt%20package%20system.md)
+[arch package system](../linux-desktop/arch%20package%20system.md)
 ## Networking
-[networking](networking.md)
-[wifi-bluetooth](wifi-bluetooth.md)
-[DNS in a nutshell](DNS%20in%20a%20nutshell.md)
-[SSH](SSH.md)
-
+[networking](networking/networking.md)
+[wifi-bluetooth](networking/wifi-bluetooth.md)
+[DNS in a nutshell](networking/dns-in-a-nutshell.md)
+[SSH](networking/ssh.md)
 ## Virtualization
-[kvm](kvm.md)
-[docker in a nutshell](../virtualization/docker%20in%20a%20nutshell.md)
-[docker](../virtualization/docker.md)
-[docker-images](../virtualization/docker-images.md)
+[kvm](virtualization/kvm.md)
+[docker in a nutshell](virtualization/docker-in-a-nutshell.md)
+[docker](virtualization/docker.md)
+[docker-images](virtualization/docker-images.md)
+[[docker]]

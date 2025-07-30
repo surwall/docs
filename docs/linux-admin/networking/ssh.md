@@ -1,5 +1,5 @@
 ## Intro
-SSH is a client/server protocol that uses [security in network](../../3-cs-basics/security%20in%20network.md#Public%20Key%20Encryption), confidentiality, and integrity of communications between two hosts.
+SSH is a client/server protocol that uses [security in network](../../cs/security-in-network.md), confidentiality, and integrity of communications between two hosts.
 OpenSSH, the open source SSH implementation which is the most popular one. It contains several commands:
 * ssh: ssh client
 * sshd: ssh server

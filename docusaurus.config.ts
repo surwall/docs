@@ -94,7 +94,7 @@ const config: Config = {
         {
           type: 'dropdown', label: 'Windows',
           items: [
-            { type: 'doc', docId: 'windows-script/PowerShell-Scripting-CrashCourse', label: 'PWSH' },
+            { type: 'docSidebar', sidebarId: 'winScriptSidebar', label: 'Windows Scripts' },
             { type: 'docSidebar', sidebarId: 'winGuiSidebar', label: 'Windows Gui Dev' },
             { type: 'docSidebar', sidebarId: 'winSetupSidebar', label: 'Windows Setup'}
           ]
@@ -121,15 +121,6 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
         {
           title: 'Community',
           items: [
