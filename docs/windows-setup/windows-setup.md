@@ -1,5 +1,8 @@
-# Windows Setup
-
+---
+title: Windows Setup
+sidebar_position: 1
+---
+## intro
 As an old Windows user who has experienced Windows XP, Windows 7, Windows 10, and Windows 11, I've observed a recurring issue. Over time, as you install numerous applications, your system tends to slow down when compared to its performance right after a fresh installation. The primary reason behind this slowdown is that a significant portion of the applications you install are not pure or lightweight.
 
 Many applications tend to add daemon services, auto-start behaviors, and schedules to run in the background. These additional processes accumulate over time, leading to noticeable system lag. The more of these resource-intensive background tasks and services are running simultaneously, the more strain they put on the system resources, resulting in a degradation of overall performance.
@@ -60,5 +63,5 @@ REG ADD "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /V "EnableMultic
 ```
 
 ### win7运行win10软件
-VxKex 可以让你的 Windows 7 系统焕发第二春，它能让那些只能在 Windows 8、8.1 和 10 上运行的应用程序也能在 Windows 7 上运行。
+[VxKex](https://github.com/i486/VxKex) 可以让你的 Windows 7 系统焕发第二春，它能让那些只能在 Windows 8、8.1 和 10 上运行的应用程序也能在 Windows 7 上运行。
 
