@@ -65,3 +65,34 @@ REG ADD "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /V "EnableMultic
 ### win7运行win10软件
 [VxKex](https://github.com/i486/VxKex) 可以让你的 Windows 7 系统焕发第二春，它能让那些只能在 Windows 8、8.1 和 10 上运行的应用程序也能在 Windows 7 上运行。
 
+### 去掉创建Windows快捷方式产生的后缀名
+
+1. 打开注册表`HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer`
+
+2. 将名称`link`从`1e 00 00 00`修改为`00 00 00 00`
+
+
+
+## 软件添加为开机自动
+
+1. 在`%ProgramData%\Microsoft\Windows\Start Menu\Programs\StartUp`创建对应的快捷方式
+
+   > [!note]
+   >
+   > 你可以在快捷方式中添加参数(还没有试过)
+
+2. 使用注册表
+
+   1. For applications that run at startup for all users, the registry paths are
+      ```txt
+      HKLM\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Run
+      
+      HKLM\Software\Microsoft\Windows\CurrentVersion\Run
+      ```
+
+   2. For applications that run at startup for the current user, the registry path is:
+      ```txt
+      HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+      ```
+
+

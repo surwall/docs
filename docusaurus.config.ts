@@ -113,6 +113,9 @@ const config: Config = {
             {type: 'docSidebar', sidebarId: 'linuxadminSidebar', label: 'Linux Administration'},
             {type: 'docSidebar', sidebarId: 'linuxdesktopSidebar', label: 'Linux Desktop'},
           ]
+        },
+        {
+          type: 'docSidebar', sidebarId: 'englishSidebar', label: 'English'
         }
       ],
     },
